@@ -1,15 +1,29 @@
 // src/containers/CommentBox.js
 
-import React from "react";
 import CommentList from "../components/CommentList";
+import React, { useState } from "react";
 
 const CommentBox = () => {
+    const [comments, setComments] = useState(	
+        [
+            {
+                id: 1,
+                author: "Rick Astley",
+                text: "Never gonna give you up!"
+            },
+            {
+                id: 2,
+                author: "Valerie Gibson",
+                text: "I'm dreaming in React..."
+            }
+        ]
+    )
 
     return (
-    <>
-        <h1>Comments Box here</h1>	
-        <CommentList />					
-    </>
+        <>
+            <h2>Comments Box here</h2>
+            <CommentList comments={comments} /> 
+        </>
     );
 
 }
