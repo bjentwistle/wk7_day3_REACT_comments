@@ -2,15 +2,14 @@
 
 import React from "react";
 
-const Comment = ({author, children}) => {
+const Comment = ({ author, children }) => {
 
-    return(
+    return (
         <>
-        <h4>{children}</h4>
-        <p>{author}</p>	
+            <h4>{children}</h4>
+            <p> - {author}</p>
         </>
     )
-
 };
 
 export default Comment;
